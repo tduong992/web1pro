@@ -9,9 +9,11 @@
     
     <!-- Bootstrap -->
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -21,17 +23,23 @@
     <![endif]-->
 </head>
 <body>
-    <h1>Hello, world!</h1>
-    <ul class="nav nav-tabs nav-justified">
-        <li role="presentation" class="active"><a href="#"><span class="glyphicon glyphicon-map"> Home</span></a></li>
-        <li role="presentation"><a href="#"><span class="glyphicon glyphicon-article"> Articles</span></a></li>
-        <li role="presentation"><a href="#"><span class="glyphicon glyphicon-map"> About us</span></a></li>
-    </ul>
-    <img src="img/world_map.jpg" alt="world map" width="780" height="300">
+<div class="container-fluid">
+    <nav class="navbar navbar-default col-lg-12">
+        <ul class="nav navbar-nav">
+            <li role="presentation" class="active"><a href="#"><i class="glyphicon glyphicon-home"> Home</i></a></li>
+            <li role="presentation"><a href="#"><span class="glyphicon glyphicon-bed"> Hotel</span></a></li>
+            <li role="presentation"><a href="#"><span class="glyphicon glyphicon-envelope"> Contact us</span></a></li>
+        </ul>
+    </nav>
+    <div class="row">
+        <h1 class="col-lg-12">Hello, world!</h1>
+    </div>
+    <img src="img/world_map.jpg" alt="world map" width="50%" height="50%">
+</div>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
