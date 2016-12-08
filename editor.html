@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Bootstrap Test</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="css/styles.css">
-    <title>Bootstrap Test</title>
-
+    
     <link rel="stylesheet" href="js/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css"/>
-
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.css" rel="stylesheet">
 
 </head>
 <body>
@@ -43,6 +44,7 @@
             <a href="#"><span class="glyphicon glyphicon-edit"></span> Editor</a>
         </li>
     </ul>
+    
     <div class="panel panel-default">
         <div class="panel-body col-lg-2">
             <!-- left aside ? -->
@@ -111,20 +113,15 @@
                 <button type="submit" class="btn btn-primary">Publish</button>
             </form>
         </div>
+        
         <div class="panel-body col-lg-2">
             <!-- right aside ? -->
         </div>
-        
     </div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
-    <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.css" rel="stylesheet">
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.js"></script>
-
+<!-- Datetime picker's script -->
 <script type="text/javascript" src="js/moment/min/moment.min.js"></script>
 <script type="text/javascript" src="js/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
 <script type="text/javascript">
@@ -132,6 +129,11 @@
         $('#datetimepicker1').datetimepicker();
     });
 </script>
+<!-- Richtext editor's script -->
+<!-- From: http://summernote.org/getting-started/#run-summernote -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.js"></script>
 <script>
 $(function() {
     $('#summernote').summernote({
