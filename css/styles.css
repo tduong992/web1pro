@@ -1,11 +1,11 @@
-body {
-    font-family: "Bauhaus 93" sans-serif;
-}
-
 .form-control {
-    width: 10%;
+    width: auto;
 }
 
 form {
     padding: 15px !important;
+}
+
+.carousel-inner {
+    width: auto;
 }
