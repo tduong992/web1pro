@@ -16,21 +16,31 @@
 </head>
 <body>
 <div class="container-fluid">
-    <h1 style="display:inline!important;">Blog</h1>
-    <!--<form action="index.html" method="GET" id="logout" style="display:inline!important; float: right;">
-        <input type="submit" name="log" id="log" class="botton" value="Logout"/>
-    </form>
-    &lt;!&ndash;<form action="index.html" method="POST" class="form-inline" style="display: inline !important; float: right;">
-        <div class="form-group">
-            <label class="sr-only" for="exampleInputEmail3">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Enter email">
+    <!--<div class="panel panel-default">-->
+        <div class="panel-body col-lg-12">
+            <h1 style="display:inline!important;">Blog</h1>
+            <!--<form action="index.html" method="GET" id="logout" style="display:inline!important; float: right;">
+                <input type="submit" name="log" id="log" class="botton" value="Logout"/>
+            </form>-->
+            <form action="index.html" method="POST" class="form-inline" style="display: inline !important; float: right;">
+                <div class="input-group">
+                    <span><i class="glyphicon glyphicon-user"></i>
+                        Logged in as <a href="#">admin</a>
+                    </span>
+                </div>
+                <!--<div class="form-group">
+                    <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <label class="sr-only" for="exampleInputPassword3">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
+                </div>-->
+                <button type="submit" class="btn btn-primary">Sign out</button>
+            </form>
         </div>
-        <div class="form-group">
-            <label class="sr-only" for="exampleInputPassword3">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
-        </div>
-        <button type="submit" class="btn btn-primary">Sign in</button>
-    </form>&ndash;&gt;-->
+    <!--</div>-->
+    
     
     <!-- Navigation menu -->
     <ul class="nav nav-tabs">
@@ -112,7 +122,9 @@
                 </div>
                 <div class="row">
                     <!-- Trigger the modal with a button -->
-                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Save</button>
+                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" onclick="waitingDialog.show();setTimeout(function () {waitingDialog.hide();}, 1000);">
+                        Save
+                    </button>
                     <!-- Modal -->
                     <div class="modal fade" id="myModal" role="dialog">
                         <div class="modal-dialog">
@@ -143,7 +155,7 @@
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
-
+<script src="js/tmp_bootstrap-waitingfor.js"></script>
 <!-- Datetime picker's script -->
 <script type="text/javascript" src="js/moment/min/moment.min.js"></script>
 <script type="text/javascript" src="js/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
