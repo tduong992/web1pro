@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <title>Suche</title>
+</head>
+<body>
+<div class="container-fluid">
+    <h1>Blog</h1>
+    <ul class="nav nav-tabs">
+        <li role="presentation">
+            <a href="home.html"><span class="glyphicon glyphicon-map-marker"></span> Home</a>
+        </li>
+        <li role="presentation">
+            <a href="./artikel.html"><span class="glyphicon glyphicon-book"></span> Artikel</a>
+        </li>
+        <li role="presentation">
+            <a href="./editor.html"><span class="glyphicon glyphicon-edit"></span> Editor</a>
+        </li>
+        <li role="presentation" class="active">
+            <a href="#"><span class="glyphicon glyphicon-search"></span> Search</a>
+        </li>
+    </ul>
+        <form class="panel">
+        <div class="form-group" class="panel-body col-lg-4">
+            <label for="countryInput">Country</label>
+            <input type="text" class="form-control" id="countryInput" placeholder="Country">
+        </div>
+        <button type="button" class="btn btn-primary" onclick="waitingDialog.show();setTimeout(function () {waitingDialog.hide();}, 1000);">Suchen</button>    </div>
+        </form>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="scripts/bootstrap-waitingfor.js"></script>
+</body>
+</html>
