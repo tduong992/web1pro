@@ -302,8 +302,8 @@
                         $("#popupBasic").popup("close");
                     }, 3000);*/
                     setTimeout(function(){
-                        $("#myModal").popup();
-                        $("#myModal").popup("open");
+                        $("#save_modal").popup();
+                        $("#save_modal").popup("open");
                     }, 100);
                 });
 

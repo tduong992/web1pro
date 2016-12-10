@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Bootstrap Test</title>
+    <title>Trip Blog</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,31 +16,18 @@
 </head>
 <body>
 <div class="container-fluid">
-    <!--<div class="panel panel-default">-->
-        <div class="panel-body col-lg-12">
-            <h1 style="display:inline!important;">Blog</h1>
-            <!--<form action="index.html" method="GET" id="logout" style="display:inline!important; float: right;">
-                <input type="submit" name="log" id="log" class="botton" value="Logout"/>
-            </form>-->
-            <form action="index.html" method="POST" class="form-inline" style="display: inline !important; float: right;">
-                <div class="input-group">
-                    <span><i class="glyphicon glyphicon-user"></i>
-                        Logged in as <a href="#">admin</a>
-                    </span>
-                </div>
-                <!--<div class="form-group">
-                    <label class="sr-only" for="exampleInputEmail3">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Enter email">
-                </div>
-                <div class="form-group">
-                    <label class="sr-only" for="exampleInputPassword3">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
-                </div>-->
-                <button type="submit" class="btn btn-primary">Sign out</button>
-            </form>
-        </div>
-    <!--</div>-->
-    
+    <div class="panel-body col-lg-12">
+        <h1 style="display:inline!important;">Blog</h1>
+        <form action="index.html" method="POST" class="form-inline" style="display: inline !important; float: right;">
+            <div class="input-group">
+                <span><i class="glyphicon glyphicon-user"></i>
+                    <!-- TODO write a page for the admin user ? -->
+                    Logged in as <a href="#">admin</a>
+                </span>
+            </div>
+            <button type="submit" class="btn btn-primary">Sign out</button>
+        </form>
+    </div>
     
     <!-- Navigation menu -->
     <ul class="nav nav-tabs">
@@ -66,8 +53,8 @@
                 <div class="row">
                     <!-- Country options -->
                     <div class="form-group col-lg-6">
-                        <label for="exampleSelect1">Country</label>
-                        <select class="form-control" id="exampleSelect1">
+                        <label for="country_select">Country</label>
+                        <select class="form-control" id="country_select">
                             <option>Austria</option>
                             <option>Belgium</option>
                             <option>Czech Republic</option>
@@ -88,8 +75,8 @@
                     </div>
                     <!-- City options -->
                     <div class="form-group col-lg-6">
-                        <label for="exampleSelect2">Cities</label>
-                        <select multiple class="form-control" id="exampleSelect2">
+                        <label for="city_multi_select">Cities</label>
+                        <select multiple class="form-control" id="city_multi_select">
                             <option>1</option>
                             <option>2</option>
                             <option>3</option>
@@ -101,9 +88,9 @@
                 <div class="row">
                     <!-- Datepicker -->
                     <div class="form-group col-lg-6">
-                        <label for="datetimepicker1">Datetime</label>
-                        <div class='input-group date' id='datetimepicker1'>
-                            <input type='text' class="form-control"/>
+                        <label for="datetimepicker">Datetime</label>
+                        <div class="input-group date" id="datetimepicker">
+                            <input type="text" class="form-control"/>
                             <span class="input-group-addon">
                             <span class="glyphicon glyphicon-calendar"></span>
                         </span>
@@ -111,8 +98,8 @@
                     </div>
                     <!-- Upload file -->
                     <div class="form-group col-lg-6">
-                        <label for="exampleInputFile">Upload file</label>
-                        <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+                        <label for="input_file">Upload file</label>
+                        <input type="file" class="form-control-file" id="input_file" aria-describedby="fileHelp">
                         <small id="fileHelp" class="form-text text-muted">Upload an image about your trip.</small>
                     </div>
                 </div>
@@ -122,11 +109,11 @@
                 </div>
                 <div class="row">
                     <!-- Trigger the modal with a button -->
-                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" onclick="waitingDialog.show();setTimeout(function () {waitingDialog.hide();}, 1000);">
+                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#save_modal" onclick="waitingDialog.show();setTimeout(function () {waitingDialog.hide();}, 1000);">
                         Save
                     </button>
                     <!-- Modal -->
-                    <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal fade" id="save_modal" role="dialog">
                         <div class="modal-dialog">
                             <!-- Modal content-->
                             <div class="modal-content">
@@ -141,7 +128,6 @@
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                                 </div>
                             </div>
-        
                         </div>
                     </div>
                 </div>
@@ -161,7 +147,7 @@
 <script type="text/javascript" src="js/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
 <script type="text/javascript">
     $(function () {
-        $('#datetimepicker1').datetimepicker();
+        $('#datetimepicker').datetimepicker();
     });
 </script>
 <!-- Richtext editor's script -->
@@ -169,14 +155,14 @@
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.js"></script>
 <script>
-$(function() {
-    $('#summernote').summernote({
-        height: 300,                 // set editor height
-        minHeight: null,             // set minimum height of editor
-        maxHeight: null,             // set maximum height of editor
-        focus: true                  // set focus to editable area after initializing summernote
+    $(function() {
+        $('#summernote').summernote({
+            height: 300,                 // set editor height
+            minHeight: null,             // set minimum height of editor
+            maxHeight: null,             // set maximum height of editor
+            focus: true                  // set focus to editable area after initializing summernote
+        });
     });
-});
 </script>
 </body>
 </html>
