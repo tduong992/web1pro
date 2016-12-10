@@ -146,7 +146,7 @@
         hide: function () {
             if (typeof $dialog !== 'undefined') {
                 $dialog.modal('hide');
-                window.location.href = "../home.html";
+                window.location.href = "./artikel.html";
             }
         },
         /**
