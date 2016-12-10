@@ -1,17 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Trip Blog</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="css/styles.css">
-    <title>Bootstrap Test</title>
+    
+    <link rel="stylesheet" href="js/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css"/>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.css" rel="stylesheet">
+
 </head>
 <body>
 <div class="container-fluid">
-    <h1>Blog</h1>
+    <div class="panel-body col-lg-12">
+        <h1 style="display:inline!important;">Blog</h1>
+        <form action="index.html" method="POST" class="form-inline" style="display: inline !important; float: right;">
+            <div class="input-group">
+                <span><i class="glyphicon glyphicon-user"></i>
+                    <!-- TODO write a page for the admin user ? -->
+                    Logged in as <a href="#">admin</a>
+                </span>
+            </div>
+            <button type="submit" class="btn btn-primary">Sign out</button>
+        </form>
+    </div>
+    
+    <!-- Navigation menu -->
     <ul class="nav nav-tabs">
         <li role="presentation">
             <a href="home.html"><span class="glyphicon glyphicon-map-marker"></span> Home</a>
@@ -26,25 +44,128 @@
             <a href="./search.html"><span class="glyphicon glyphicon-search"></span> Search</a>
         </li>
     </ul>
+    
     <div class="panel panel-default">
-        <div class="panel-body col-lg-4">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
-            Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis
+        <div class="panel-body col-lg-2">
+            <!-- left aside ? -->
         </div>
-        <div class="panel-body col-lg-4">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
-            Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis
+        
+        <!-- Main editor block -->
+        <div class="panel-body col-lg-8">
+            <form>
+                <div class="row">
+                    <!-- Country options -->
+                    <div class="form-group col-lg-6">
+                        <label for="country_select">Country</label>
+                        <select class="form-control" id="country_select">
+                            <option>Austria</option>
+                            <option>Belgium</option>
+                            <option>Czech Republic</option>
+                            <option>Finland</option>
+                            <option>France</option>
+                            <option>Germany</option>
+                            <option>Great Britain</option>
+                            <option>Greece</option>
+                            <option>Italy</option>
+                            <option>Netherlands</option>
+                            <option>Norway</option>
+                            <option>Poland</option>
+                            <option>Portugal</option>
+                            <option>Spain</option>
+                            <option>Sweden</option>
+                            <option>Switzerland</option>
+                        </select>
+                    </div>
+                    <!-- City options -->
+                    <div class="form-group col-lg-6">
+                        <label for="city_multi_select">Cities</label>
+                        <select multiple class="form-control" id="city_multi_select">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- Datepicker -->
+                    <div class="form-group col-lg-6">
+                        <label for="datetimepicker">Datetime</label>
+                        <div class="input-group date" id="datetimepicker">
+                            <input type="text" class="form-control"/>
+                            <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                        </div>
+                    </div>
+                    <!-- Upload file -->
+                    <div class="form-group col-lg-6">
+                        <label for="input_file">Upload file</label>
+                        <input type="file" class="form-control-file" id="input_file" aria-describedby="fileHelp">
+                        <small id="fileHelp" class="form-text text-muted">Upload an image about your trip.</small>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- Text editor -->
+                    <div id="summernote" class="col-lg-8"><p>Hello Summernote</p></div>
+                </div>
+                <div class="row">
+                    <!-- Trigger the modal with a button -->
+                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#save_modal" onclick="waitingDialog.show();setTimeout(function () {waitingDialog.hide();}, 1000);">
+                        Save
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="save_modal" role="dialog">
+                        <div class="modal-dialog">
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Article saved</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Your article is successfully saved.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
         </div>
-        <div class="panel-body col-lg-4">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
-            Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis
+        
+        <div class="panel-body col-lg-2">
+            <!-- right aside ? -->
         </div>
     </div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+<script src="js/tmp_bootstrap-waitingfor.js"></script>
+<!-- Datetime picker's script -->
+<script type="text/javascript" src="js/moment/min/moment.min.js"></script>
+<script type="text/javascript" src="js/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('#datetimepicker').datetimepicker();
+    });
+</script>
+<!-- Richtext editor's script -->
+<!-- From: http://summernote.org/getting-started/#run-summernote -->
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.js"></script>
+<script>
+    $(function() {
+        $('#summernote').summernote({
+            height: 300,                 // set editor height
+            minHeight: null,             // set minimum height of editor
+            maxHeight: null,             // set maximum height of editor
+            focus: true                  // set focus to editable area after initializing summernote
+        });
+    });
+</script>
 </body>
 </html>
