@@ -146,8 +146,7 @@
         hide: function () {
             if (typeof $dialog !== 'undefined') {
                 $dialog.modal('hide');
-                <!--TODO: adjust hardcoded path -->
-                window.location.href = "../web1pro/home.html";
+                window.location.href = "./artikel.html";
             }
         },
         /**
