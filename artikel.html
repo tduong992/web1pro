@@ -8,19 +8,30 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <title>Bootstrap Test</title>
+    
+    <script src="jquery.js"></script>
+    <!-- TODO Für was ist diese Funktion? -->
+    <script>
+        $(function(){
+            $("#includedModalEdinburgh").load("modal_edinburgh.html");
+        });
+    </script>
 </head>
 <body>
 <div class="container-fluid">
     <h1>Blog</h1>
     <ul class="nav nav-tabs">
         <li role="presentation">
-            <a href="./index.html"><span class="glyphicon glyphicon-map-marker"></span> Home</a>
+            <a href="home.html"><span class="glyphicon glyphicon-map-marker"></span> Home</a>
         </li>
         <li role="presentation"  class="active">
             <a href="#"><span class="glyphicon glyphicon-book"></span> Artikel</a>
         </li>
         <li role="presentation">
             <a href="./search.html"><span class="glyphicon glyphicon-search"></span> Suche</a>
+        </li>
+        <li role="presentation">
+            <a href="./search.html"><span class="glyphicon glyphicon-search"></span> Search</a>
         </li>
     </ul>
     
@@ -162,7 +173,6 @@
         </div>
     </div>
 </div>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
