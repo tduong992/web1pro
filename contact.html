@@ -1,29 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Trip Blog</title>
+    <title>Contact</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">-->
-    <link rel="stylesheet" href="css/styles.css">
-    
+
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    
     <!-- Custom CSS -->
-    <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css" />
-    <link href="css/business-frontpage.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="css/business-frontpage.css">
 </head>
 <body>
 <div class="container-fuild">
     <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
-            <div class="col-md-12">
+            <div class="col-md-10 col-lg-offset-1">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header col-lg-1">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -37,11 +33,13 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <!-- Navigation menu list -->
-                    <div class="col-lg-4">
+                    <div class="col-lg-5">
                         <ul class="nav navbar-nav">
-                            <li><a href="./index.html"> Home</a></li>
+                            <li><a href="./home.html"> Home</a></li>
                             <li>
-                                <a href="./artikel.html"> Articles</a>
+                                <a href="./articles.html"> Articles</a>
+                                <!-- TODO nice to have: show a sub-menu to the articles page grouped by categories.
+                                     Redirect to the same articles page as a static Website project. -->
                                 <!--<ul>
                                     <li><a href="#">Continents</a></li>
                                     <li><a href="#">Countries</a></li>
@@ -49,24 +47,22 @@
                                     <li><a href="#">Seasons</a></li>
                                 </ul>-->
                             </li>
-                            <li><a href="#"> About</a></li>
-                            <li><a href="#"> Contact</a></li>
+                            <li><a href="./about.html"> About</a></li>
+                            <li><a href="./contact.html"> Contact</a></li>
                         </ul>
                     </div>
-                    <!-- Log In form -->
-                    <div class="navbar-form navbar-right col-lg-7">
-                        <form action="./editor.html" method="POST" class="form-inline" style="display: inline !important;">
+                    <!-- Log In Form -->
+                    <div class="navbar-form navbar-right col-lg-6">
+                        <form action="./editor.html" method="POST" class="form-inline">
                             <div class="form-group">
-                                <!--<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>-->
                                 <input id="email" type="text" class="form-control" name="email" placeholder="Email">
                             </div>
                             <div class="form-group">
-                                <!--<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>-->
                                 <input id="password" type="password" class="form-control" name="password" placeholder="Password">
                             </div>
                             <button type="submit" class="btn btn-primary">Sign in</button>
                         </form>
-                    </div>
+                    </div> <!-- End Log In Form -->
                 </div> <!-- /.navbar-collapse -->
             </div>
         </div> <!-- /.container -->
@@ -81,17 +77,16 @@
                     <br />
                     <img class="img-circle img-responsive col-lg-4 col-lg-offset-2" src="./img/contact_people.jpg" alt="">
                     <h1 class="tagline">Business Name or Tagline</h1>
-                    <div class="col-sm-4">
+                    <div class="col-lg-4 col-lg-offset-1" id="contact_us">
                         <h2>Contact Us</h2>
                         <address>
                             <strong>ZHAW - WEB1 Project</strong>
                             <br>Technikumstrasse 9
-                            <br> 8401 Winterthur, CH
+                            <br>8401 Winterthur, CH
                             <br>
                         </address>
                         <address>
-                            <abbr title="Phone"><span class="form-group-addon"><i class="glyphicon glyphicon-phone-alt"></i></span></abbr> (123) 456-7890
-                            <br>
+                            <abbr title="Phone"><span class="form-group-addon"><i class="glyphicon glyphicon-phone-alt"></i></span></abbr> (123) 456-7890<br>
                             <abbr title="Email"><span class="form-group-addon"><i class="glyphicon glyphicon-envelope"></i></span></abbr> <a href="mailto:#">name@example.com</a>
                         </address>
                     </div>
@@ -103,54 +98,29 @@
     <!-- Page Content -->
     <div class="container">
         <div class="row">
-            <!--<div class="col-sm-8">
-                <h2>What We Do</h2>
-                <p>Introduce the visitor to the business using clear, informative text. Use well-targeted keywords within your sentences to make sure search engines can find the business.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et molestiae similique eligendi reiciendis sunt distinctio odit? Quia, neque, ipsa, adipisci quisquam ullam deserunt accusantium illo iste exercitationem nemo voluptates asperiores.</p>
-                <p>
-                    <a class="btn btn-default btn-lg" href="#">Call to Action &raquo;</a>
-                </p>
+            <div class="col-lg-12">
+                <h2>More support options</h2>
             </div>
-            <div class="col-sm-4">
-                <h2>Contact Us</h2>
-                <address>
-                    <strong>Start Bootstrap</strong>
-                    <br>3481 Melrose Place
-                    <br>Beverly Hills, CA 90210
-                    <br>
-                </address>
-                <address>
-                    <abbr title="Phone">P:</abbr>(123) 456-7890
-                    <br>
-                    <abbr title="Email">E:</abbr> <a href="mailto:#">name@example.com</a>
-                </address>
-            </div>-->
-            <h2>More support options</h2>
         </div>
-        <!-- /.row -->
         <hr>
-    
+        
+        <!-- 3 support options -->
         <div class="row">
             <div class="col-sm-4">
-                <!--<img class="img-circle img-responsive img-center" src="./img/contact_people.jpg" alt="">-->
                 <h2><a href="./contact_form.html">Business, IT &amp; developer</a></h2>
                 <p>Small &amp; medium business, enterprises &amp; partners, IT professionals, and developers.</p>
             </div>
             <div class="col-sm-4">
-                <!--<img class="img-circle img-responsive img-center" src="http://placehold.it/300x300" alt="">-->
                 <h2><a href="./contact_form.html">Blog Store sales &amp; support</a></h2>
                 <p>Get help with choosing a Blog product, or ask about a previous purchase from the Blog online or physical store.</p>
             </div>
             <div class="col-sm-4">
-                <!--<img class="img-circle img-responsive img-center" src="http://placehold.it/300x300" alt="">-->
                 <h2><a href="./contact_form.html">Disability Answer Desk</a></h2>
                 <p>Support for people with disabilites.</p>
             </div>
         </div>
-        <!-- /.row -->
-    
         <hr>
-    
+
         <!-- Footer -->
         <footer>
             <div class="row">
@@ -158,17 +128,13 @@
                     <p>Copyright &copy; Your Website 2014</p>
                 </div>
             </div>
-            <!-- /.row -->
         </footer>
-
-    </div>
-    <!-- /.container -->
+    </div> <!-- End Page Content -->
     
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-    
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -176,7 +142,5 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </div>
-
 </body>
-
 </html>
