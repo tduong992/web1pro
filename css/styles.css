@@ -12,12 +12,20 @@ body {
                             Change if height of navigation changes. */
 }
 
+nav {
+    position: fixed;
+}
+
 p {
     text-align: justify;
 }
 
-nav {
-    position: fixed;
+header {
+    text-align: center;
+}
+
+.img-circle {
+    width: 275px;
 }
 
 .container-fluid {
@@ -37,14 +45,6 @@ nav {
 .form-inline {
     display: inline !important;
     color: #9d9d9d;
-}
-
-header {
-    text-align: center;
-}
-
-.img-circle {
-    width: 275px;
 }
 
 .thumbnail {
@@ -83,6 +83,18 @@ header {
     flex-wrap: wrap;
 }
 
+aside {
+    padding-top: 5%;
+}
+
+#about {
+    padding-top: 5%;
+}
+
+.business-header {
+    padding-top: 5%;
+}
+
 .contact {
     text-align: center;
     color: #16323e;
@@ -92,10 +104,6 @@ header {
 
 #contact_us {
     text-align: left !important;
-}
-
-.business-header {
-    padding-top: 5%;
 }
 
 #datepicker {
