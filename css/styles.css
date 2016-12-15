@@ -77,6 +77,12 @@ header {
     width: 45%;
 }
 
+#articles {
+    padding-top: 5%;
+    display:flex;
+    flex-wrap: wrap;
+}
+
 .contact {
     text-align: center;
     color: #16323e;
