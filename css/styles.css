@@ -43,6 +43,10 @@ header {
     text-align: center;
 }
 
+.img-circle {
+    width: 275px;
+}
+
 .thumbnail {
     min-height: 400px;
 }
@@ -84,7 +88,7 @@ header {
     text-align: left !important;
 }
 
-header #contact_us {
+.business-header {
     padding-top: 5%;
 }
 
