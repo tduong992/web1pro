@@ -72,7 +72,7 @@
                 options = {};
             }
             if (typeof message === 'undefined') {
-                message = 'Wird geladen';
+                message = 'Saving article ...';
             }
             settings = $.extend({
                 headerText: '',
@@ -146,8 +146,27 @@
         hide: function () {
             if (typeof $dialog !== 'undefined') {
                 $dialog.modal('hide');
-                window.location.href = "./artikel.html";
+
+                /*console.log("addsf");
+                $dialog.modal(
+                    '<div class="modal fade" id="save_modal" role="dialog">' +
+                    '<div class="modal-dialog">' +
+                    '<div class="modal-content">' +
+                    '<div class="modal-header">' +
+                    '<button type="button" class="close" data-dismiss="modal">&times;</button>' +
+                    '<h4 class="modal-title">Article saved</h4>' +
+                    '</div>' +
+                    '<div class="modal-body">' +
+                    '<p>Your article is successfully saved.</p>' +
+                    '</div>' +
+                    '</div>' +
+                    '</div>' +
+                    '</div>'
+                );*/
+
+                window.location.href = "#";
             }
+
         },
         /**
          * Changes or displays current dialog message
