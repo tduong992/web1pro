@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Articles</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+<div class="container-fluid">
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="col-md-10 col-md-offset-1">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header col-md-1">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Blog</a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <!-- Navigation menu list -->
+                    <div class="col-md-5">
+                        <ul class="nav navbar-nav">
+                            <li><a href="./home.html"> Home</a></li>
+                            <li>
+                                <a href="./articles.html"> Articles</a>
+                                <!-- TODO nice to have: show a sub-menu to the articles page grouped by categories.
+                                     Redirect to the same articles page as a static Website project. -->
+                                <!--<ul>
+                                    <li><a href="#">Continents</a></li>
+                                    <li><a href="#">Countries</a></li>
+                                    <li><a href="#">Cities</a></li>
+                                    <li><a href="#">Seasons</a></li>
+                                </ul>-->
+                            </li>
+                            <li><a href="./about.html"> About</a></li>
+                            <li><a href="./contact.html"> Contact</a></li>
+                        </ul>
+                    </div>
+                    <!-- Log In Form -->
+                    <div class="navbar-form navbar-right col-md-6">
+                        <form action="./editor.html" method="POST" class="form-inline">
+                            <div class="form-group">
+                                <input id="email" type="text" class="form-control" name="email" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <input id="password" type="password" class="form-control" name="password" placeholder="Password">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Sign in</button>
+                        </form>
+                    </div> <!-- End Log In Form -->
+                </div> <!-- /.navbar-collapse -->
+            </div>
+        </div> <!-- /.container -->
+    </nav>
+    
+    <div class="container">
+        <div class="row" style="display:flex; flex-wrap: wrap;">
+            <div class="row">
+                <div class="col-xs-6 col-sm-3 wrap">
+                    <div class="thumbnail">
+                        <img src="img/edinburgh.jpg" alt="Edinburgh" class="img-rounded">
+                        <div class="caption">
+                            <h4>Edinburgh <small>8. December 2016</small></h4>
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                            <p><a href="./articles_demo/article_edinburgh.html" class="btn btn-primary" role="button">Read more!</a></p>
+    
+                            <button type="button" class="btn btn-primary btn-md">Read more!</button>
+                            
+                            <!-- Modal -->
+                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                            <h4 class="modal-title" id="myModalLabel">Edinburgh</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <img class="img-responsive" src="img/edinburgh.jpg" alt="Edinburgh" />
+                                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                                            Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                            Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+                                            Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                                            Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.
+                                            At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, At accusam aliquyam diam diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt justo labore Stet clita ea et gubergren, kasd magna no rebum. sanctus sea sed takimata ut vero voluptua. est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-3 wrap">
+                    <div class="thumbnail">
+                        <img src="img/london.jpg" alt="London" class="img-rounded">
+                        <div class="caption">
+                            <h4>London <small>12. November 2016</small></h4>
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                            <p><a href="./articles_demo/article_london.html" class="btn btn-primary" role="button">Read more!</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-3 wrap">
+                    <div class="thumbnail">
+                        <img src="./img/madrid.jpg" alt="Madrid" class="img-rounded">
+                        <div class="caption">
+                            <h4>Madrid <small>12. November 2016</small></h4>
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                            <p><a href="./articles_demo/article_madrid.html" class="btn btn-primary" role="button">Read more!</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-3 wrap">
+                    <div class="thumbnail">
+                        <img src="img/malediven.jpg" alt="Malediven" class="img-rounded">
+                        <div class="caption">
+                            <h4>Malediven <small>12. November 2016</small></h4>
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                            <p><a href="./articles_demo/article_maldiven.html" class="btn btn-primary" role="button">Read more!</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6 col-sm-3">
+                    <div class="thumbnail">
+                        <img src="img/stockholm.jpg" alt="Stockholm" class="img-rounded">
+                        <div class="caption">
+                            <h4>Stockholm <small>1. August 2016</small></h4>
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                            <p><a href="#" class="btn btn-primary" role="button">Read more!</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-3">
+                    <div class="thumbnail">
+                        <img src="img/oslo.jpg" alt="Oslo" class="img-rounded">
+                        <div class="caption">
+                            <h4>Oslo <small>23. Juni 2016</small></h4>
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                            <p><a href="#" class="btn btn-primary" role="button">Read more!</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-3">
+                    <div class="thumbnail">
+                        <img src="img/new_york.jpg" alt="New York" class="img-rounded">
+                        <div class="caption">
+                            <h4>New York <small>1. Mai 2016</small></h4>
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                            <p><a href="#" class="btn btn-primary" role="button">Read more!</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-3">
+                    <div class="thumbnail">
+                        <img src="img/antarktis.jpg" alt="Antarktis" class="img-rounded">
+                        <div class="caption">
+                            <h4>Antarktis <small>19. Januar 2016</small></h4>
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                            <p><a href="#" class="btn btn-primary" role="button">Read more!</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6 col-sm-3">
+                    <div class="thumbnail">
+                        <img src="img/world.png" alt="World" class="img-rounded world">
+                        <div class="caption">
+                            <h4>Thumbnail label <small>DD. Month Year</small></h4>
+                            <p>...</p>
+                            <p><a href="#" class="btn btn-primary" role="button">Read more!</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-3">
+                    <div class="thumbnail">
+                        <img src="img/world.png" alt="World" class="img-rounded world">
+                        <div class="caption">
+                            <h4>Thumbnail label <small>DD. Month Year</small></h4>
+                            <p>...</p>
+                            <p><a href="#" class="btn btn-primary" role="button">Read more!</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-3">
+                    <div class="thumbnail">
+                        <img src="img/world.png" alt="World" class="img-rounded world">
+                        <div class="caption">
+                            <h4>Thumbnail label <small>DD. Month Year</small></h4>
+                            <p>...</p>
+                            <p><a href="#" class="btn btn-primary" role="button">Read more!</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+    $(function(){
+        $("#includedModalEdinburgh").load("modal_edinburgh.html");
+    });
+</script>
+</body>
+</html>
